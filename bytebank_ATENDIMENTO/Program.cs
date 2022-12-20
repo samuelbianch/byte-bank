@@ -4,8 +4,8 @@ void TestaArray(){
     int[] vetor = new int[5];
 
     for(int i=0; i<vetor.Length; i++){
-        Console.WriteLine($"Digite o {i}° numero: ");
-        vetor[i] = Console.ReadLine();
+        Console.WriteLine($"Digite o {i+1}° numero: ");
+        vetor[i] = Convert.ToInt32(Console.ReadLine());
     }
 
     for(int i=0; i<vetor.Length; i++){
@@ -16,7 +16,7 @@ void TestaArray(){
 void AchaPalavraIgual(){
     string[] vetor = new string[5];
     for(int i=0; i<vetor.Length; i++){
-        Console.WriteLine($"Digite a {i}° palavra: ");
+        Console.WriteLine($"Digite a {i+1}° palavra: ");
         vetor[i] = Console.ReadLine();
     }
 
@@ -31,10 +31,13 @@ void AchaPalavraIgual(){
     }*/
     // Also can use foreach
 
-    foreach(string busca in vetor){
-        if(vetor.Equals(busca)){
-            Console.WriteLine($"A palvra { busca } e igual a { vetor[i] }: ");
+    foreach(string palavra in vetor){
+        if(palavra.Equals(busca)){
+            Console.WriteLine($"A palvra { busca } foi encontrada ");
             return;
         }
     }
 }
+
+//TestaArray();
+AchaPalavraIgual();
